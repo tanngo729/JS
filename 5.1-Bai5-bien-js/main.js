@@ -28,6 +28,6 @@
 // console.log(doSoi);
 
 // Bài tập
-let name = prompt("Nhập tên của bạn");
-console.log("Tôi tên là: ", name);
-console.log("Chào mừng bạn đến với bình nguyên vô tận");
+// let name = prompt("Nhập tên của bạn");
+// console.log("Tôi tên là: ", name);
+// console.log("Chào mừng bạn đến với bình nguyên vô tận");

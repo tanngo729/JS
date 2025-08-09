@@ -10,9 +10,28 @@
 // }
 // console.log(GT);
 
+// let n = Number(prompt("Mời bạn nhập n: "));
+// while (!Number.isInteger(n) || n < 0) {
+//   n = Number(prompt("Số không hợp lệ, Mời bạn nhập lại: "));
+// }
+
+// let GT = 1;
+// for (let i = 1; i <= n; i++) {
+//   GT *= i;
+// }
+// console.log(n + "! = " + GT);
+
+
+
+
+
 
 // Bài 16: Viết chương trình nhập số a từ bàn phím nếu a chẵn thì tính tổng số chẵn còn lẽ thì thoát chương trình
 // let a = Number(prompt("Nhập a: "));
+
+// while (!Number.isInteger(a)) {
+//   a = Number(prompt("Nhập lại a: "));
+// }
 // if (a % 2 === 0) {
 //   let tong = 0;
 //   // while (i <= a) {
@@ -30,6 +49,9 @@
 
 // Bài 17: viết chương trình tính tổng các số lẻ từ 1 đến n, n nhập từ bàn phím
 // let n = Number(prompt("Nhập n: "));
+// while (!Number.isInteger(n)) {
+//   n = Number(prompt("Nhập lại n: "));
+// }
 // let tong = 0;
 // for (let i = 1; i <= n; i += 2) {
 //   if (i === 3) {
@@ -92,30 +114,33 @@
 
 
 // Bài 21: viết chương trình nhập số nguyên a>0 từ bàn phím và cho biết đó có phải là số nguyên tố hay không
-// let tiepTuc = true;
 
-// while (tiepTuc) {
-//   let a = Number(prompt("Mời nhập vào số a (>0): "));
-//   let isPrime = true;
+while (true) {
+  let a = Number(prompt("Mời nhập vào số a (>0): "));
+  while (!Number.isInteger(a) || a <= 0) {
+    a = Number(prompt("Mời nhập lại số a (>0): "));
+  }
+  let isPrime = true;
+  for (let i = 2; i < a; i++) {
+    if (a % i === 0) {
+      isPrime = false;
+      break;
+    }
+  }
+  if (isPrime) {
+    alert(a + " là số nguyên tố")
+  } else {
+    alert(a + " kh là số nguyên tố")
+  }
 
-//   if (a <= 1) {
-//     isPrime = false;
-//   } else {
-//     for (let i = 2; i <= Math.sqrt(a); i++) {
-//       if (a % i === 0) {
-//         isPrime = false;
-//         break;
-//       }
-//     }
-//   }
+  let answer = prompt(`
+    Bạn có muốn tiếp tục không?
+    Nhập "no" để thoát
+    Bấm phím bất kỳ để tiếp tục
+  `);
+  if (answer.toLowerCase === "no") {
+    break;
+  }
+}
 
-//   if (isPrime) {
-//     console.log(`Số ${a} là số nguyên tố`);
-//   } else {
-//     console.log(`Số ${a} không phải là số nguyên tố`);
-//   }
 
-//   tiepTuc = confirm("Bạn có muốn tiếp tục?");
-// }
-
-// console.log("Chương trình kết thúc");

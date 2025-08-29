@@ -41,3 +41,4 @@ console.log(s1.calcAge(new Date().getFullYear()));
 console.log(s1.major);
 s1.study();
 console.log(s1);
+// 
